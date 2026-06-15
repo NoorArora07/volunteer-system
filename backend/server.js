@@ -9,7 +9,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin:'https://volunteer-system7-55d22st5w-na-projects7.vercel.app/',
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (origin === 'http://localhost:3000') return callback(null, true);
+    if (/^https:\/\/volunteer-system7.*\.vercel\.app$/.test(origin)) return callback(null, true);
+    callback(new Error('Not allowed by CORS'));
+  },
   credentials: true
 }));
 app.use(express.json());
