@@ -1,6 +1,6 @@
-# 🦋 Naye Pankh Foundation — Volunteer Registration System
+# Volunteer Registration System
 
-A full-stack MERN application for managing volunteer registrations, built for the Naye Pankh Foundation.
+A full-stack MERN application for managing volunteer registrations
 
 ## ✨ Features
 
